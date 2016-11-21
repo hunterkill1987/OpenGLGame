@@ -138,12 +138,6 @@ void Actor::Init()
 	this->CollisionBox->Resize(BBsize);
 }
 
-
-glm::mat4 Actor::GetTransform()
-{
-	return Transform;
-}
-
 void Actor::Update(float DeltaTime)
 {   
 	glm::vec3 velocity = this->GetActorVelocity();
@@ -203,15 +197,6 @@ void Actor::DestroyActor()
 {
 	bIsAlive = false;
 }
-
-void Actor::SetOwner(Actor* NewOwner)
-{
-	if (NewOwner != nullptr)
-	{
-		Owner = NewOwner;
-	}
-}
-
 
 Actor::~Actor()
 {

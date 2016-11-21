@@ -4,6 +4,7 @@
 #include "BoundingBox.h"
 
 class BoundingBox;
+//Mesh Class
 class Mesh
 {
 public:
@@ -34,6 +35,7 @@ private:
 
 public:
 
+	//Scale Mesh 
 	void SetScale(float Scale);
 	glm::vec3 GetScale();
 	std::vector<glm::vec3> GetVertics();
@@ -64,15 +66,15 @@ public:
 	virtual Mesh* GetMesh() { return ActorMesh; };
 	virtual void Init();
 
-	virtual glm::mat4 GetTransform();
 
 	virtual void Update(float DeltaTime);
 	void DestroyActor();
-	bool CheckCollision();
 
+	//Check Collision for Actor
 	virtual void OnHit(Actor* HitedActor);
+
+	//Check if Actor is still Alive
 	virtual bool IsAlive();
-	virtual void SetOwner(Actor* Owner);
 
 	virtual void SetActorVelocity(glm::vec3 NewVelocity);
 	virtual void SetActorPosition(glm::vec3 NewPosition);

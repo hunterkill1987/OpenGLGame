@@ -12,12 +12,13 @@ private:
 		glm::vec3 Size;
 		glm::vec3 Center;
 
-		std::vector<glm::vec3> GetVertics();
+		//Check Collision AABB-AABB
 		bool CheckCollision(Actor* OtherActor);
 public:
 
 	BoundingBox(Actor* NewOwner);
 
+	//Check Collision every Tick
 	void DoCollision();
 
 	glm::vec3 GetCenterOfMass();

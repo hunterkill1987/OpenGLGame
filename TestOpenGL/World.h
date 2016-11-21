@@ -63,7 +63,6 @@ public:
 					NewActor = tmpActor;
 				}
 			}
-			NewActor->SetOwner(Owner);
 			NewActor->Init();
 			NewActor->SetActorPosition(NewPos);
 
